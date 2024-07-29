@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  /* border: 1px solid black; */
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  flex-direction: column;
+}
+
+svg {
+  width: 100%;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  margin-top: 10px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: orangered;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 20px;
+}
+
+.container {
+  transform: translateX(100%);
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#triangle {
+  animation: triangle 3s infinite;
+  transform-origin: center;
+}
+@keyframes triangle {
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(75deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#sphere {
+  animation: sphere 3s infinite;
+}
+
+@keyframes sphere {
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(-75deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#round {
+  animation: round 3s infinite;
+}
+@keyframes round {
+  25% {
+    transform: translateX(170px);
+  }
+  50% {
+    transform: translateY(-180px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
